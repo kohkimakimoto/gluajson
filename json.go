@@ -1,4 +1,4 @@
-package json
+package gluajson
 
 import (
 	"github.com/yuin/gopher-lua"

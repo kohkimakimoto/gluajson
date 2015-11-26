@@ -12,5 +12,5 @@
 //
 // Below is an example usage of the library:
 //  L := lua.NewState()
-//  luajson.Preload(s)
-package json
+//  gluajson.Preload(s)
+package gluajson
