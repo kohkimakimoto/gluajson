@@ -52,6 +52,15 @@ func TestSimple(t *testing.T) {
 	}
 	obj.obj2 = obj2
 	assert(json.encode(obj) == nil)
+
+	local obj = {"a","b",what="c",[5]="asd"}
+	local jsonStr = json.encode(obj)
+	local jsonObj = json.decode(jsonStr)
+	assert(obj[1] == jsonObj["1"])
+	assert(obj[2] == jsonObj["2"])
+	assert(obj.what == jsonObj["what"])
+	assert(obj[5] == jsonObj["5"])
+
 	`
 	s := lua.NewState()
 	Preload(s)
