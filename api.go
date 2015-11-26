@@ -51,5 +51,3 @@ func apiEncode(L *lua.LState) int {
 	L.Push(lua.LString(string(data)))
 	return 1
 }
-
-

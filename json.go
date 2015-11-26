@@ -18,4 +18,3 @@ func Loader(L *lua.LState) int {
 func Preload(L *lua.LState) {
 	L.PreloadModule("json", Loader)
 }
-
